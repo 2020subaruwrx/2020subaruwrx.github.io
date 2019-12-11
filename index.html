@@ -1,77 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>TIM BURTON'S BRAND NEW 2020 SUBARU WRX</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class='highscraper'>
-    <div class='wall-one'>
-      <div></div>
-    </div>
-    <div class='wall-two'>
-      <div></div>
-    </div>
-    <div class='roof'>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
-      <div></div>
-    </div>
-  </div>
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+<!--  Content  -->
+<article>
+  <h1>Brand New 2020 Subaru WRX<br /> <span>Tim Burton's Car of the Future</span></h1>
+</article>
   
-  <div class='brickhouse'>
-    <div class='wall-one'>
-      <div></div>
-    </div>
-    <div class='wall-two'>
-      <div></div>
-    </div>
-    <div class='roof'>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-  </div>
-  
-  <div class='leaves'>
-    <div></div>
-  </div>
-  <div class='wood'></div>
-  
-  <div class='ground-cropped'>
-    <div class='shadow-brickhouse'></div>
-    <div class='shadow-highscraper'></div>
-    
-    <div class='car-one red'></div>
-    <div class='car-one blue'></div>
-    <div class='car-two black'></div>
-    
-  </div>
-  
-  <div class='water'></div>
-  <div class='fontain'>
-    <div></div>
-  </div>
-  <div class='water-drops'>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  
-  <div class='road'></div>
-  <div class='ground'>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+<video autoplay id="video-background" muted plays-inline>
+  <source src="http://timburtonsbrandnew2020subaruwrx.com/assets/start.mp4" type="video/mp4">
+</video>
+<video loop id="video-loop" style="display:none" muted plays-inline>
+  <source src="http://timburtonsbrandnew2020subaruwrx.com/assets/loop.mp4" type="video/mp4">
+</video>
+<!-- partial -->
+  <script type="text/javascript">
+    document.querySelector('#video-background').addEventListener('ended', e => {
+      e.target.remove();
+      document.querySelector('#video-loop').style.display = 'initial';
+      document.querySelector('#video-loop').play();
+    })
+  </script>
 </body>
+</html>
